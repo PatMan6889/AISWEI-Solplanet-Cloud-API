@@ -282,24 +282,24 @@ if __name__ == "__main__":
     # Retrieve and display all current data
 
     print("\n=== 3.1 getPlanListPro ===")
-    power_data = api.getPlanListPro()
-    if isinstance(power_data, dict):
-        print(json.dumps(power_data, indent=2))
+    plant_list = api.getPlanListPro()
+    if isinstance(plant_list, dict):
+        print(json.dumps(plant_list, indent=2))
 
     print("\n=== 3.2 getPlantOverviewPro ===")
-    power_data = api.getPlantOverviewPro()
-    if isinstance(power_data, dict):
-        print(json.dumps(power_data, indent=2))
+    plant_overview = api.getPlantOverviewPro()
+    if isinstance(plant_overview, dict):
+        print(json.dumps(plant_overview, indent=2))
 
     print("\n=== 3.3 getPlantOutputPro ===")
-    power_data = api.getPlantOutputPro()
-    if isinstance(power_data, dict):
-        print(json.dumps(power_data, indent=2))
+    plant_output = api.getPlantOutputPro()
+    if isinstance(plant_output, dict):
+        print(json.dumps(plant_output, indent=2))
 
     print("\n=== 3.4 getPlantEventPro ===")
-    power_data = api.getPlantEventPro()
-    if isinstance(power_data, dict):
-        print(json.dumps(power_data, indent=2))
+    plant_events = api.getPlantEventPro()
+    if isinstance(plant_events, dict):
+        print(json.dumps(plant_events, indent=2))
 
     print("\n=== 3.5 getDeviceListPro ===")
     devices = api.getDeviceListPro()
@@ -317,36 +317,36 @@ if __name__ == "__main__":
         print(json.dumps(last_ts_data, indent=2))
         
     print("\n=== 3.8 getInverterDataPagePro ===")
-    inverter_data = api.getInverterDataPagePro()
-    if isinstance(inverter_data, dict):
-        print(json.dumps(inverter_data, indent=2))
+    inverter_data_page = api.getInverterDataPagePro()
+    if isinstance(inverter_data_page, dict):
+        print(json.dumps(inverter_data_page, indent=2))
 
     print("\n=== 3.9 getInverterETodayPro ===")
-    inverter_data = api.getInverterETodayPro()
-    if isinstance(inverter_data, dict):
-        print(json.dumps(inverter_data, indent=2))
+    inverter_etoday = api.getInverterETodayPro()
+    if isinstance(inverter_etoday, dict):
+        print(json.dumps(inverter_etoday, indent=2))
 
     print("\n=== 3.10 getInverterHisErrorPagePro ===")
-    inverter_data = api.getInverterHisErrorPagePro()
-    if isinstance(inverter_data, dict):
-        print(json.dumps(inverter_data, indent=2))
-        
+    inverter_error_history = api.getInverterHisErrorPagePro()
+    if isinstance(inverter_error_history, dict):
+        print(json.dumps(inverter_error_history, indent=2))
+
     print("\n=== 3.11 getInverterCurrentErrorPro ===")
-    inverter_data = api.getInverterCurrentErrorPro()
-    if isinstance(inverter_data, dict):
-        print(json.dumps(inverter_data, indent=2))
+    inverter_current_errors = api.getInverterCurrentErrorPro()
+    if isinstance(inverter_current_errors, dict):
+        print(json.dumps(inverter_current_errors, indent=2))
 
     print("\n=== 3.12 getInverterOverviewPro ===")
-    inverter_data = api.getInverterOverviewPro()
-    if isinstance(inverter_data, dict):
-        print(json.dumps(inverter_data, indent=2))
-        
+    inverter_overview = api.getInverterOverviewPro()
+    if isinstance(inverter_overview, dict):
+        print(json.dumps(inverter_overview, indent=2))
+
     print("\n=== 3.13 getInverterRecoverStatusPro ===")
-    inverter_data = api.getInverterRecoverStatusPro()
-    if isinstance(inverter_data, dict):
-        print(json.dumps(inverter_data, indent=2))
+    inverter_recovery_status = api.getInverterRecoverStatusPro()
+    if isinstance(inverter_recovery_status, dict):
+        print(json.dumps(inverter_recovery_status, indent=2))
 
     print("\n=== 3.14 createstationPro ===")
-    inverter_data = api.createstationPro()
-    if isinstance(inverter_data, dict):
-        print(json.dumps(inverter_data, indent=2))
+    station_creation_result = api.createstationPro()
+    if isinstance(station_creation_result, dict):
+        print(json.dumps(station_creation_result, indent=2))
