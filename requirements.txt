@@ -1,0 +1,8 @@
+# AISWEI Solar API Client Dependencies
+requests>=2.28.0  # HTTP requests library
+datetime>=4.4     # Date and time handling
+typing>=3.10.0    # Type hints support
+json>=1.0         # JSON parsing (usually part of Python standard library)
+hashlib>=1.0      # Hashing functions (usually part of Python standard library)
+hmac>=1.0         # HMAC authentication (usually part of Python standard library)
+base64>=1.0       # Base64 encoding/decoding (usually part of Python standard library)
