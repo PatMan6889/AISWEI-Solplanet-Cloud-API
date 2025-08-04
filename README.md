@@ -210,6 +210,37 @@ python aiswei_api.py
 
 This will run through each API endpoint and display the results, helping you verify your credentials and connection.
 
+## 🏠 OpenHAB Integration
+
+To make your Solplanet inverter data available in OpenHAB (an open-source home automation platform), this repository provides a dedicated script: openhab_solplanet.py.
+### What It Does
+
+openhab_solplanet.py is a Python script that leverages this library to fetch real-time or periodic data from your Solplanet inverter.
+It is designed to be run by OpenHAB (e.g., via the Exec binding or Jython scripting) to periodically update OpenHAB items with your inverter’s status, live production, and other key metrics.
+The script outputs inverter data in a simple, parseable format (such as JSON or key-value pairs), making it easy for OpenHAB rules to process and display.
+
+### Placement and Usage
+
+Copy the Script:
+- Place openhab_solplanet.py into the scripts directory of your OpenHAB installation.
+
+Configure the Script:
+- Ensure that the config.py file with your credentials (see above) is accessible to the script, or adjust the script to point to its location.
+
+Call from OpenHAB:
+- Use the Exec binding or a rule to execute the script on a schedule (e.g., every 5 minutes).
+- Parse the script’s output in your OpenHAB items or rules to update your sitemap, dashboards, or automations.
+
+### Example Exec Thing (in OpenHAB’s things file):
+```
+Thing exec:command:solplanet [command="python3 /etc/openhab/scripts/openhab_solplanet.py", interval=300, timeout=60, autorun=true]
+```
+### Customization
+
+You can further adapt openhab_solplanet.py to:
+- Output only the data points you need for your smart home setup.
+- Format the output for easy integration with your specific OpenHAB version and item configuration.
+
 ## ❓ Troubleshooting
 
 ### Common Issues and Solutions
